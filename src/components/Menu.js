@@ -1,25 +1,35 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from "react";
 
-function Menu({title,menuObject}) {
+function Menu({ title, menuObject }) {
+  useEffect(() => {
+    const allLi = document
+      .querySelector(".MenuContainer ul")
+      .querySelectorAll("li");
 
-    useEffect(() => {} , [])
+    function changeMenuActive() {
+      allLi.forEach((n) => n.classList.remove("active"));
+      this.classList.add("active");
+    }
 
-    return (
-        <div className="MenuContainer">
-            <p className="title">{title}</p>
-            <ul>
-                {menuObject &&
-                 menuObject.map((menu) => (
-                    <li>
-                        <a href="#">
-                            <i>{menu.icon}</i>
-                            <span>{menu.name}</span>
-                        </a>
-                    </li>
-                 ))}    
-            </ul>            
-        </div>
-    );
+    allLi.forEach((n) => n.addEventListener("click", changeMenuActive));
+  }, []);
+
+  return (
+    <div className="MenuContainer">
+      <p className="title">{title}</p>
+      <ul>
+        {menuObject &&
+          menuObject.map((menu) => (
+            <li>
+              <a href="#">
+                <i>{menu.icon}</i>
+                <span>{menu.name}</span>
+              </a>
+            </li>
+          ))}
+      </ul>
+    </div>
+  );
 }
 
-export  {Menu};
+export { Menu };
