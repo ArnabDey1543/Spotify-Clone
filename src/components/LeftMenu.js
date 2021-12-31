@@ -2,6 +2,8 @@ import React from 'react'
 import '../styles/LeftMenu.css';
 import {FaSpotify, FaEllipsisH } from "react-icons/fa";
 import {BiSearchAlt} from "react-icons/bi";
+import { Menu } from "./Menu";
+import { MenuList } from "./MenuList";
 
 function LeftMenu() {
     return (
@@ -21,7 +23,8 @@ function LeftMenu() {
                     <BiSearchAlt/>
                 </i>
             </div>
-             
+            
+            <Menu title={"Menu"} menuObject={MenuList} />  
             
         </div>
     )
