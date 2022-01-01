@@ -135,3 +135,121 @@
     cursor: pointer;
     color: #f1f1f1;
 }
+
+.playListContainer .playListScroll{
+  height: 140px;
+  overflow-x: hidden;
+}
+
+.playListContainer .playListScroll .playlist{
+  display: flex;
+  align-items: center;
+  color: #848484;
+  margin: 10px 0;
+
+}
+.playListContainer .playListScroll .playlist:hover{
+  color: #f1f1f1;
+  transition: 0.3s;
+}
+
+.playListContainer .playListScroll .playlist .list i{
+  font-size: 18px;
+
+}
+
+.playListContainer .playListScroll .playlist .list{
+  margin-right: 15px;
+}
+
+.playListContainer .playListScroll .playlist .trash{
+  margin-left: auto;
+}
+.playListContainer .playListScroll .playlist p{
+  font-size: 16px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline;
+}
+
+
+.trackList{
+  border-top: 1px solid rgba(225, 225, 225, 0.1);
+  padding-top: 20px;
+
+}
+
+.trackList .top{
+  display: flex;
+  align-items: center;
+
+}
+
+.trackList .top img{
+  width: 50px !important;
+  
+}
+.trackList .top .trackName{
+  margin-left: 10px;
+  color: #f1f1f1;
+  font-family: 14px;
+}
+
+.trackList .top .trackName .trackSpan{
+  display: block;
+  font-size: 12px;
+  color: #848484;
+}
+
+.trackList .bottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  color: #848484;
+}
+.trackList .bottom i{
+  font-size: 18px;
+}
+.trackList .bottom i:hover{
+  color: #f1f1f1;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.trackList .bottom input{
+  position: relative;
+  height: 5px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: rgba(225, 225, 225, 0.1);
+  appearance: none;
+}
+
+/* chrome and safari */
+.trackList .bottom input::before{
+  position: absolute; 
+  content: "";
+  top: 0;
+  left: 0;
+  background: #49e12e;
+  width: 33%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: 2;
+  transition: width 250ms linear;
+}
+.trackList .bottom input::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 10px;
+  height: 20px;
+  border-radius: 10px;
+  background: #f1f1f1;
+  border: 2px solid #000;
+  cursor: pointer;
+  position: relative;
+  margin: -2px 0 0 0;
+  z-index: 3;
+  box-sizing: border-box;
+  transition: all 250ms linear;
+}
