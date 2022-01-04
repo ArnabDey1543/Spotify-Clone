@@ -15,12 +15,12 @@ function MenuPlayList() {
       <div className="playListScroll">
         {PlayList &&
           PlayList.map((list) => (
-            <div className="playlist">
+            <div className="playlist" key={list.id}>
               <i className="list">
                 <BsMusicNoteList />
               </i>
 
-              <p>Sample Name</p>
+              <p>{list.name}</p>
 
               <i className="trash">
                 <BsTrash />

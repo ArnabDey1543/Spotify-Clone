@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
+import "../styles/MainContainer.css";
+import { Banner } from "./Banner";
 
 function MainContainer() {
-    return (
-        <div>
-            
-        </div>
-    )
+  return (
+    <div className="mainContainer">
+      <Banner />
+    </div>
+  );
 }
 
-export  {MainContainer};
+export { MainContainer };

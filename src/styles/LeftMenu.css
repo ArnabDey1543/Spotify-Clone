@@ -1,4 +1,5 @@
 .leftMenu {
+  z-index: 1;
   width: 280px;
   height: 100%;
   min-height: 100vh;
@@ -6,7 +7,7 @@
   backdrop-filter: blur(10px);
   padding: 20px 15px;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32,1.275);
 }
 
 .leftMenu .logoContainer {
@@ -233,7 +234,7 @@
   top: 0;
   left: 0;
   background: #49e12e;
-  width: 33%;
+  width: 50%;
   height: 100%;
   border-radius: 10px;
   z-index: 2;
@@ -252,4 +253,52 @@
   z-index: 3;
   box-sizing: border-box;
   transition: all 250ms linear;
+}
+
+/* firefox */
+.trackList .bottom input::-moz-progress-bar{
+  background: #49e12e;
+  width: 33%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: 2;
+  transition: width 250ms linear;
+
+}
+.trackList .bottom input::-moz-range-progress{
+  background: #49e12e;
+  width: 33%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: 2;
+  transition: width 250ms linear;
+}
+
+@media screen and (max-width: 550px){
+  .leftMenu{
+    width: 64px;
+    min-width: 64px;
+  }
+  .leftMenu .searchBox{
+    display: none;
+  }
+  .leftMenu .trackList{
+    display: none;
+  }
+  .leftMenu .playListContainer{
+    display: none;
+  }
+  .leftMenu .MenuContainer ul li a span{
+    display: none;
+  }
+  .leftMenu .MenuContainer ul li a i{
+    font-size: 26px;
+  }
+  .leftMenu .MenuContainer ul li{
+    margin: 25px 0;
+  }
+
+  .leftMenu .logoContainer h2{
+    margin-left: 20px;
+  }
 }
