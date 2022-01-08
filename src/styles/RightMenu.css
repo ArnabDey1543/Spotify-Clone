@@ -69,5 +69,6 @@
 @media screen and (max-width: 550px) {
   .rightMenu {
     min-width: 64px;
+    width: 64px;
   }
 }
